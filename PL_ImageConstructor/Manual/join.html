@@ -1,0 +1,90 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta http-equiv="Content-Style-Type" content="text/css">
+		<meta http-equiv="Content-Script-Type" content="text/javascript">
+		<meta name="Author" content="りょうご">
+		<meta name="copyright" content="p-lux.net">
+		<link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+		<link rel="icon" href="favicon.ico" type="image/vnd.microsoft.icon"> 
+		<link href="common.css" rel="stylesheet" type="text/css">
+		<title>PL_ImageConstructor -マニュアル-</title>
+	</head>
+	
+	<body>
+
+<div id="full">
+
+<div id="header">
+PL_ImageConstructor Manual
+</div>
+
+<div class="h1">
+<div class="h1_padding">
+一括連結<br>
+</div>
+</div>
+
+<div id="snapshot">
+<img src="ss_join.png" alt="">
+</div>
+
+<!--================================-->
+
+<div class="h2">
+<div class="h2_padding">
+概要
+</div>
+</div>
+
+<div class="contents">
+複数のデータをくっつけて1つの画像データにします。<br>
+その際、登録した全てのデータを連結するのではなく、3枚ずつなどの指定が可能です。<br>
+ゲームのテクスチャ作成や、ゲームエンジン吉里吉里2などで使用されるボタンの画像の作成等に有効です。<br>
+</div><!--contents-->
+
+<!--================================-->
+
+<div class="h2">
+<div class="h2_padding">
+各種コントロール
+</div>
+</div>
+
+<div class="contents">
+
+<ul class="lv1">
+	<li><b>1枚に詰め込む枚数</b><br>
+		“横方向に接続する数 × 縦方向に接続する数”の答えが表示されます。<br>
+		ユーザが任意で変更する事はできません。<br>
+		<br>
+		<br>
+		
+	<li><b>サイズの基準</b><br>
+		詰め込む画像の縦横サイズの基準を決めます。<br>
+		「行単位と列単位」の場合、縦幅はその行、横幅はその列内で最も大きいものとなります。<br>
+		<br>
+		<br>
+		
+	<li><b>共有箇所をトリミング</b><br>
+		複数の画像の共有部分を比較し、差異のある箇所だけを連結して出力します。<br>
+		それにより、ゲーム制作で使う、目パチ、口パクなどのデータを作成することができます。<br>
+		縦横の幅が同じファイルでなければ比較できません。<br>
+		<br>
+		<br>
+		
+	<li><b>枚数チェックを行わない</b><br>
+		実行時に登録された枚数が「1枚に詰め込む枚数」の倍数でない場合は停止しますが、それを無視して処理を行います。<br>
+		<br>
+		<br>
+</ul>
+</div><!--contents-->
+
+<!--================================-->
+
+</div><!--full-->
+
+</body>
+</html>

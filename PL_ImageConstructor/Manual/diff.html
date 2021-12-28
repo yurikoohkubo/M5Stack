@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta http-equiv="Content-Style-Type" content="text/css">
+		<meta http-equiv="Content-Script-Type" content="text/javascript">
+		<meta name="Author" content="りょうご">
+		<meta name="copyright" content="p-lux.net">
+		<link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+		<link rel="icon" href="favicon.ico" type="image/vnd.microsoft.icon"> 
+		<link href="common.css" rel="stylesheet" type="text/css">
+		<title>PL_ImageConstructor -マニュアル-</title>
+	</head>
+	
+	<body>
+	
+<div id="full">
+
+<div id="header">
+PL_ImageConstructor Manual
+</div>
+
+<div class="h1">
+<div class="h1_padding">
+差分出力<br>
+</div>
+</div>
+
+<div id="snapshot">
+<img src="ss_diff.png" alt="">
+</div>
+
+<!--================================-->
+
+<div class="h2">
+<div class="h2_padding">
+概要
+</div>
+</div>
+
+<div class="contents">
+基礎なる画像と比較し、差異のある範囲の画像を出力します。<br>
+その際、個々の上方をテキストファイルとして出力する事が出来ます。<br>
+主に、立ち絵の表情差分などを切り出し、ゲームリソース容量の最適化やメモリの消耗量を削減するのに使用します。<br>
+</div><!--contents-->
+
+<!--================================-->
+
+<div class="h2">
+<div class="h2_padding">
+各種コントロール
+</div>
+</div>
+
+<div class="contents">
+
+<ul class="lv1">
+	<li><b>ファイル名後方から差分とみなす文字数（拡張子は含まず）</b><br>
+		一括処理する際、差分ファイルと見なすファイルの範囲を指定します。<br>
+		例えば、「主人公_00.png」～「主人公_06.png」までが1つのまとまりで、
+		「ヒロイン_00.png」～「ヒロイン_12.png」から別のまとまりであるとする場合、
+		ファイル名後方の数値2文字が差分指定なので「2」と指定するようにします。<br>
+		<br>
+		<br>
+		
+	<li><b>ディレクトリの構造を維持</b><br>
+		登録されたファイルのフォルダ構成再現して出力します。<br>
+		<br>
+		<br>
+		
+	<li><b>出力情報</b><br>
+		画像を出力した同フォルダに、この場で指定した情報がテキストファイルとして出力されます。
+		空白の場合は出力しないようになります。<br>
+		<br>
+		<br>
+		
+</ul>
+</div><!--contents-->
+
+<!--================================-->
+
+</div><!--full-->
+
+</body>
+</html>

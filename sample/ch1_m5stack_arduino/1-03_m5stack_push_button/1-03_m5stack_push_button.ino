@@ -19,7 +19,7 @@ void loop() {
     M5.Lcd.println("A Release");        //文字を表示
   }
   else if (M5.BtnA.wasPressed())  {     //Aボタンを押した場合の処理
-    M5.Lcd.println("A press");          //文字を表示
+    M5.Lcd.println("Hello World!");          //文字を表示
   }
  
   else if (M5.BtnA.wasReleasefor(1000)) {

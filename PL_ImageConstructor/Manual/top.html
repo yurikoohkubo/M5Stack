@@ -1,0 +1,252 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta http-equiv="Content-Style-Type" content="text/css">
+		<meta http-equiv="Content-Script-Type" content="text/javascript">
+		<meta name="Author" content="りょうご">
+		<meta name="copyright" content="p-lux.net">
+		<link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+		<link rel="icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+		<link href="common.css" rel="stylesheet" type="text/css">
+		<title>PL_ImageConstructor -マニュアル-</title>
+	</head>
+
+	<body>
+
+<div id="full">
+
+<div id="header">
+PL_ImageConstructor Manual
+</div>
+
+<div class="h1">
+<div class="h1_padding">
+PL_ImageConstructor<br>
+<div id="ver">[ Ver.1.21 (2021/08/20) ]</div>
+</div>
+</div>
+
+<div id="snapshot">
+<img src="ss_top.png" alt="">
+</div>
+
+<!--================================-->
+
+<a name="preface"></a>
+<div class="h2">
+<div class="h2_padding">
+前書き
+</div>
+</div>
+
+<div class="contents">
+PL_ImageConstructorは、ダミーファイルを一括作成したり、複数のファイルを一括でトリミングしたり、連結したりできる支援ツールです。<br>
+ゲーム制作の支援として特化していますが、それ以外の用途にも使用可能です。<br>
+</div><!--contents-->
+
+<!--================================-->
+
+<a name="spec"></a>
+<div class="h2">
+<div class="h2_padding">
+動作環境
+</div>
+</div>
+
+<div class="contents">
+<table cellspacing="5" border="0">
+<tr><td><ul class="lv1"><li>OS</ul></td><td>Windows XP/7 日本語版<br></td></tr>
+<tr><td><ul class="lv1"><li>必須ランタイム</ul></td><td><span style="color:#ee5555;">.NET Framework3.5</span></td></tr>
+</table>
+</div><!--contents-->
+
+<!--================================-->
+
+<a name="assent"></a>
+<div class="h2">
+<div class="h2_padding">
+使用許諾
+</div>
+</div>
+
+<div class="contents">
+<ul class="lv1">
+<li>アプリケーションを利用した事によるいかなる損害に対して、作者は一切の責任を負いません。
+<li>アプリケーションの修正、及びバージョンアップの義務を作者は負いません。
+<li>動作環境の項は、アプリケーションが快適に動作することを保障する物ではありません。
+堅苦しくて申し訳ありませんが、上記を同意の上アプリケーションをご利用下さい。
+</ul>
+</div><!--contents-->
+
+<!--================================-->
+
+<a name="uninstall"></a>
+<div class="h2">
+<div class="h2_padding">
+アンインストール
+</div>
+</div>
+
+<div class="contents">
+PL_ImageConstructorのフォルダを削除してください。<br>
+レジストリの操作はしていません。<br>
+</div><!--contents-->
+
+<!--================================-->
+
+<a name="version"></a>
+<div class="h2">
+<div class="h2_padding">
+バージョン情報
+</div>
+</div>
+
+<div class="contents">
+<ul class="lv1">
+	<li>Ver.1.21 (2021/8/20)
+		<ul class="lv2">
+			<li>一括伸縮：バイリニアおよびバイキュービック拡大時、画像外の四方が透明としてフィルタ処理される問題を修正。<br>
+		</ul>
+		<br>
+	<li>Ver.1.20 (2018/1/18)
+		<ul class="lv2">
+			<li>一括伸縮：ニアレストネイバー補間法が正常に機能していない問題を修正。<br>
+		</ul>
+		<br>
+	<li>Ver.1.19 (2017/5/1)
+		<ul class="lv2">
+			<li>.Net Framework 3.5に変更。<br>
+			<li>タブコントロールにフォーカスがあるときマウスホイールによるタブ切り替えを追加。<br>
+			<li>共有設定：「処理が終了した時、ファイルリストを削除」を追加。<br>
+			<li>一括連結：「同階層の画像のみ連結」を追加。<br>
+			<li>一部ツールで「処理が終了した時、保存されたフォルダを開く」が機能しない問題を修正。<br>
+			<li>一括合成を追加。<br>
+		</ul>
+		<br>
+	<li>Ver.1.18 (2016/6/6)
+		<ul class="lv2">
+			<li>余白追加：矩形指定モード時、基準位置が機能しない問題を修正。<br>
+		</ul>
+		<br>
+	<li>Ver.1.17 (2016/5/27)
+		<ul class="lv2">
+			<li>一括伸縮：「大きいほうに合わせる」「小さいほうに合わせる」を追加。<br>
+			<li>一括伸縮：「拡大を禁止」「縮小を禁止」を追加。<br>
+		</ul>
+		<br>
+	<li>Ver.1.16 (2016/4/21)
+		<ul class="lv2">
+			<li>一括変換を追加のメモリ管理を最適化。<br>
+		</ul>
+		<br>
+	<li>Ver.1.15 (2015/11/13)
+		<ul class="lv2">
+			<li>出力フォーマットにpng（1bitモノクロ）を追加。<br>
+			<li>出力フォーマットにpng（8bitグレースケール）を追加。<br>
+		</ul>
+		<br>
+	<li>Ver.1.14 (2015/07/30)
+		<ul class="lv2">
+			<li>一括チャンネル操作を追加。<br>
+		</ul>
+		<br>
+	<li>Ver.1.13 (2015/07/09)
+		<ul class="lv2">
+			<li>一括変換を追加。<br>
+			<li>伸縮以外の「ディレクトリ構造を維持する」を修正。<br>
+			<li>一部コンボボックスのキーボード入力を禁止化。<br>
+			<li>一括分割：命名規制が保存されていなかった問題を修正。<br>
+		</ul>
+		<br>
+	<li>Ver.1.12 (2014/07/25)
+		<ul class="lv2">
+			<li>一括伸縮を追加。<br>
+			<li>一括切り抜きを追加。<br>
+			<li>一括余白追加を追加。<br>
+			<li>「処理が終了した時、保存されたフォルダを開く」の仕様変更。<br>
+			<li>入出力対応フォーマットにjpegを追加。（出力時の品質レベル指定可能）<br>
+		</ul>
+		<br>
+	<li>Ver.1.11 (2014/01/30)
+		<ul class="lv2">
+			<li>一括分割：「命名規則」のオプションを追加。<br>
+			<li>バージョン管理方式変更。<br>
+		</ul>
+		<br>
+	<li>Ver.1.10 (2013/11/06)
+		<ul class="lv2">
+			<li>一括連結：「枚数チェックを行わない」のオプションを追加。<br>
+			<li>一部チェックボックス情報が正しく保存されない問題を修正。<br>
+		</ul>
+		<br>
+	<li>Ver.1.09 (2012/11/13)
+		<ul class="lv2">
+			<li>一部アクセスキーが使用できなかった問題を修正。<br>
+			<li>テキストモードの変換速度を向上。<br>
+		</ul>
+		<br>
+	<li>Ver.1.08 (2012/07/27)
+		<ul class="lv2">
+			<li>アイコンを差し替え。<br>
+			<li>テキストボックス外でCtrl+Aを押すと強制終了する問題を修正。<br>
+			<li>特定条件でファイルがリストボックスに登録されない問題を修正。<br>
+		</ul>
+		<br>
+	<li>Ver.1.07 (2012/02/15)
+		<ul class="lv2">
+			<li>差分出力：ファイル系タグから拡張子削除、Extensionタグを追加。<br>
+			<li>ダミー作成：特定条件で強制終了される問題を修正。<br>
+		</ul>
+		<br>
+	<li>Ver.1.06 (2011/09/20)
+		<ul class="lv2">
+			<li>保存場所の階層がない場合、ディレクトリを自動作成するように変更。<br>
+			<li>差分出力を追加。<br>
+		</ul>
+		<br>
+	<li>Ver.1.05 (2011/08/24)
+		<ul class="lv2">
+			<li>一括分割を追加。<br>
+			<li>一括連結：合計連結数を65以上にしようとすると落ちる問題を修正。<br>
+		</ul>
+		<br>
+	<li>Ver.1.04 (2011/06/08)
+		<ul class="lv2">
+			<li>一括連結：サイズの基準項目を追加。<br>
+			<li>一括連結：各種不具合を修正。<br>
+		</ul>
+		<br>
+	<li>Ver.1.03 (2011/04/05)
+		<ul class="lv2">
+			<li>ウィンドウサイズの変更に対応。<br>
+			<li>テキストボックスにCtrl+Aのショートカットを実装。<br>
+		</ul>
+		<br>
+	<li>Ver.1.02 (2011/03/31)
+		<ul class="lv2">
+			<li>一括連結リストの選択状態が分かりにくい問題を修正。
+		</ul>
+		<br>
+	<li>Ver.1.01 (2011/01/14)
+		<ul class="lv2">
+			<li>ログの縦幅を変更できるように変更。
+			<li>処理完了後、最前面に来るように変更。
+			<li>テキストボックスの区切り文字を編集できるように変更。
+		</ul>
+		<br>
+	<li>Ver.1.00 (2010/12/29)
+		<ul class="lv2">
+			<li>初出。
+		</ul>
+</ul>
+</div><!--contents-->
+
+
+<!--================================-->
+
+</div><!--full-->
+
+</body>
+</html>

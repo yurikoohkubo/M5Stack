@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta http-equiv="Content-Style-Type" content="text/css">
+		<meta http-equiv="Content-Script-Type" content="text/javascript">
+		<meta name="Author" content="りょうご">
+		<meta name="copyright" content="p-lux.net">
+		<link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+		<link rel="icon" href="favicon.ico" type="image/vnd.microsoft.icon"> 
+		<link href="common.css" rel="stylesheet" type="text/css">
+		<title>PL_ImageConstructor -マニュアル-</title>
+	</head>
+	
+	<body>
+	
+<div id="full">
+
+<div id="header">
+PL_ImageConstructor Manual
+</div>
+
+<div class="h1">
+<div class="h1_padding">
+一括分割<br>
+</div>
+</div>
+
+<div id="snapshot">
+<img src="ss_spli.png" alt="">
+</div>
+
+<!--================================-->
+
+<div class="h2">
+<div class="h2_padding">
+概要
+</div>
+</div>
+
+<div class="contents">
+画像データを一定間隔で切り取り複数のファイルとして出力します。<br>
+</div><!--contents-->
+
+<!--================================-->
+
+<div class="h2">
+<div class="h2_padding">
+各種コントロール
+</div>
+</div>
+
+<div class="contents">
+
+<ul class="lv1">
+	<li><b>等分</b><br>
+		このタブが選択状態で開始ボタンを押すと等分モードで切り出します。<br>
+		元画像を指定した値で等分します。<br>
+		<br>
+		<ul class="lv2">
+			<li><b>等分出来ない時は無視</b><br>
+			等分する際、ピクセル数に余りが生じる画像をスキップします。<br>
+		</ul>
+		<br>
+		<br>
+	<li><b>固定値</b><br>
+		このタブが選択状態で開始ボタンを押すと固定値モードで切り出します。<br>
+		指定した値のピクセル数で切り出します。<br>
+		<br>
+		<br>
+	<li><b>命名規制</b><br>
+		出力される画像のファイル名のフォーマットを指定します。<br>
+		<br>
+		<ul class="lv2">
+			<li><b>シーケンス（純粋連番）</b><br>
+			単純な連番を付与します。連番の並びは、{Y * X_MAX + X}です。<br>
+			Adobe After EffectsなどのPNGシーケンス読み込みの際などに便利です。<br>
+			<li><b>XY数値付与</b><br>
+			ファイル名の最後にX_Yの並びで値を追加します。<br>
+			<li><b>YX数値付与</b><br>
+			ファイル名の最後にY_Xの並びで値を追加します。<br>
+			<br>
+			
+
+		</ul>
+		<br>
+		<br>
+</ul>
+</div><!--contents-->
+
+<!--================================-->
+
+</div><!--full-->
+
+</body>
+</html>

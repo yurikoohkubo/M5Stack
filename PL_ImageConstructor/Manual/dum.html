@@ -1,0 +1,111 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta http-equiv="Content-Style-Type" content="text/css">
+		<meta http-equiv="Content-Script-Type" content="text/javascript">
+		<meta name="Author" content="りょうご">
+		<meta name="copyright" content="p-lux.net">
+		<link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+		<link rel="icon" href="favicon.ico" type="image/vnd.microsoft.icon"> 
+		<link href="common.css" rel="stylesheet" type="text/css">
+		<title>PL_ImageConstructor -マニュアル-</title>
+	</head>
+	
+	<body>
+
+<div id="full">
+
+<div id="header">
+PL_ImageConstructor Manual
+</div>
+
+<div class="h1">
+<div class="h1_padding">
+ダミー画像作成<br>
+</div>
+</div>
+
+<div id="snapshot">
+<img src="ss_dum.png" alt="">
+</div>
+
+<!--================================-->
+
+<div class="h2">
+<div class="h2_padding">
+概要
+</div>
+</div>
+
+<div class="contents">
+未実装な画像の仮素材として差し込むダミーイメージの作成を行ないます。<br>
+サイズを指定して、作成を押せば作ることができますが、リストがあれば一括で作成することもできます。<br>
+画像の色、画像内に書き込むテキストなども自由に変更可能です。<br>
+</div><!--contents-->
+
+<!--================================-->
+
+<div class="h2">
+<div class="h2_padding">
+各種コントロール
+</div>
+</div>
+
+<div class="contents">
+
+<ul class="lv1">
+	<li><b>簡易モード</b><br>
+		ダミーファイルを1つだけ作成したり、連番のダミーファイルを大量に生成したい時に使います。<br>
+		視覚的に分かりやすいモードです。<br>
+		<br>
+		<br>
+	<li><b>詳細モード</b><br>
+		ダミーファイルのファイル名やメモを個別に指定して一括で作成することができます。<br>
+		既にリソースリスト等がある場合はこちらのほうが便利です。<br>
+		<br>
+		<ul class="lv2">
+			<li><b>テキストボックスモード</b><br>
+			ファイルリストを一時的にテキストボックス状態にします。<br>
+			これにより、一般的なテキストを貼り付ける事ができるので、リストの編集が極めて楽になります。<br>
+			なお、セパレータ（区切り文字）は、初期設定の場合 半角カンマです。<br>
+		</ul>
+		<br>
+		<br>
+	<li><b>生地の色/縁の色</b><br>
+		生地はイメージの背景、縁はイメージの周囲1pxです。<br>
+		色は、リストから指定するほか、入力する事で任意のものに変更する事もできます。<br>
+		色指定はARGB表記となります。<br>
+		Aはアルファ（透明度）、Rはレッド（赤）、Gはグリーン（緑）、Bがブルー（青）です。<br>
+		従って、無透明の紫を作るには、#FFCC00FFのように指定します。<br>
+		<br>
+		<br>
+	<li><b>共有メモ</b><br>
+		全てのイメージに書き込む情報を指定します。<br>
+		タグを使うことで、ファイル名など不確定の情報も焼きこむことができます。<br>
+		<br>
+		<ul class="lv2">
+			<li><b>&lt;FileName&gt;</b><br>
+			出力したファイル名に置換されます。
+			<li><b>&lt;Width&gt;</b><br>
+			出力したイメージの横幅に置換されます。
+			<li><b>&lt;Height&gt;</b><br>
+			出力したイメージの縦幅に置換されます。
+			<li><b>&lt;No&gt;</b><br>
+			出力したイメージの番号に置換されます。
+		</ul>
+		<br>
+		
+</ul>
+
+</div><!--contents-->
+
+
+
+<!--================================-->
+
+</div><!--full-->
+
+</body>
+</html>

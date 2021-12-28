@@ -1,0 +1,97 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta http-equiv="Content-Style-Type" content="text/css">
+		<meta http-equiv="Content-Script-Type" content="text/javascript">
+		<meta name="Author" content="りょうご">
+		<meta name="copyright" content="p-lux.net">
+		<link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+		<link rel="icon" href="favicon.ico" type="image/vnd.microsoft.icon"> 
+		<link href="common.css" rel="stylesheet" type="text/css">
+		<title>PL_ImageConstructor -マニュアル-</title>
+	</head>
+	
+	<body>
+
+<div id="full">
+
+<div id="header">
+PL_ImageConstructor Manual
+</div>
+
+<div class="h1">
+<div class="h1_padding">
+一括余白追加<br>
+</div>
+</div>
+
+<div id="snapshot">
+<img src="ss_mrgn.png" alt="">
+</div>
+
+<!--================================-->
+
+<div class="h2">
+<div class="h2_padding">
+概要
+</div>
+</div>
+
+<div class="contents">
+画像データの上下左右に余白を作ります。<br>
+余白追加という名前ですが、境界線やレターボックスの追加としても使えます。<br>
+</div><!--contents-->
+
+<!--================================-->
+
+<div class="h2">
+<div class="h2_padding">
+各種コントロール
+</div>
+</div>
+
+<div class="contents">
+
+<ul class="lv1">
+	<li><b>四方指定</b><br>
+		元画像から上下左右を指定した量を追加します。<br>
+		<br>
+		<br>
+	<li><b>矩形選択</b><br>
+		横幅と高さをしたキャンバスを作成後、元画像を任意の位置に貼り付けます。<br>
+		その結果として余白が生まれます。<br>
+		なお、元の画像の方が指定サイズより大きい場合は切り取りも余白追加も行われません。<br>
+		<br>
+		<ul class="lv2">
+			<li><b>基準位置</b><br>
+			元画像の配置位置です。<br>
+			余白を追加する方向ではないので注意してください。<br>
+		</ul>
+		<br>
+		<br>
+	<li><b>縦横比</b><br>
+		横幅と高さの比率から余白を追加します。<br>
+		レターボックスを作成する際に便利です。<br>
+		<br>
+		<ul class="lv2">
+			<li><b>基準位置</b><br>
+			元画像の配置位置です。<br>
+			余白を追加する方向ではないので注意してください。<br>
+		</ul>
+		<br>
+		<br>
+	<li><b>ディレクトリの構造を維持</b><br>
+		登録されたファイルのフォルダ構成再現して出力します。<br>
+		<br>
+		<br>
+</ul>
+</div><!--contents-->
+
+<!--================================-->
+
+</div><!--full-->
+
+</body>
+</html>

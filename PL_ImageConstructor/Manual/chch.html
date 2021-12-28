@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html lang="ja">
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta http-equiv="Content-Style-Type" content="text/css">
+		<meta http-equiv="Content-Script-Type" content="text/javascript">
+		<meta name="Author" content="りょうご">
+		<meta name="copyright" content="p-lux.net">
+		<link rel="shortcut icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+		<link rel="icon" href="favicon.ico" type="image/vnd.microsoft.icon">
+		<link href="common.css" rel="stylesheet" type="text/css">
+		<title>PL_ImageConstructor -マニュアル-</title>
+	</head>
+
+	<body>
+
+<div id="full">
+
+<div id="header">
+PL_ImageConstructor Manual
+</div>
+
+<div class="h1">
+<div class="h1_padding">
+一括チャンネル操作<br>
+</div>
+</div>
+
+<div id="snapshot">
+<img src="ss_chch.png" alt="">
+</div>
+
+<!--================================-->
+
+<div class="h2">
+<div class="h2_padding">
+概要
+</div>
+</div>
+
+<div class="contents">
+画像のARGBチャンネルの値を書き換えます。<br>
+<br>
+なお、アルファ操作も単純な値の書き換えになります。<br>
+例えば、7F000000（半透明の黒）は一般的な画像加工ソフトでアルファ削除すると、白マットに乗せた上で不透明にする処理を行うケースが多く一般的にはFF7F7F7F（灰色）になりますが、このツールではマットという概念はなくそのピクセルが所持している純粋なデータになります。<br>
+その為、完全に透明なピクセルの場合でもその画像が潜在的に持っている色（白以外の色や何かしらの模様）が浮かび上がります。<br>
+</div><!--contents-->
+
+<!--================================-->
+
+<div class="h2">
+<div class="h2_padding">
+各種コントロール
+</div>
+</div>
+
+<div class="contents">
+
+<ul class="lv1">
+	<li><b>ディレクトリの構造を維持</b><br>
+		登録されたファイルのフォルダ構成再現して出力します。<br>
+		<br>
+		<br>
+</ul>
+</div><!--contents-->
+
+<!--================================-->
+
+</div><!--full-->
+
+</body>
+</html>
